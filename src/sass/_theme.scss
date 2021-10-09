@@ -1,0 +1,64 @@
+// Variables for theme
+
+// Font
+$main_font: 'Open Sans', sans-serif;
+
+// Colors
+$primary: #8331A5;
+$primaryLight: #B77DCF;
+
+$backgroundDark: #272727;
+$backgroundLight: #464646;
+
+$LaravelColor: #FF8A3B;
+$LaravelColorLight: #FBA165;
+$LaravelColorButton: #FE6207;
+$LaravelColorButtonLight: #F96D1B;
+
+$jsColor: #20A883;
+$jsColorLight: #4EC2A3;
+$jsColorButton: #198E6E;
+$jsColorButtonLight: #3B977E;
+
+$vueColor: #2E86B4;
+$vueColorLight: #56A1C8;
+$vueColorButton: #2C779E;
+$vueColorButtonLight: #327598;
+
+// Font Sizes
+$sz_default: 1rem;
+
+// util classes
+.btnPrimary {
+    background-color: $primary;
+    color: white;
+    transition: all .5s;
+
+    &:hover {
+        background-color: $primaryLight;
+    }
+
+    &.laravel {
+        background-color: $LaravelColorButton;
+
+        &:hover {
+            background-color: $LaravelColorButtonLight;
+        }
+    }
+
+    &.js {
+        background-color: $jsColorButton;
+
+        &:hover {
+            background-color: $jsColorButtonLight;
+        }
+    }
+
+    &.vue {
+        background-color: $vueColorButton;
+
+        &:hover {
+            background-color: $vueColorButtonLight;
+        }
+    }
+}

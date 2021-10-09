@@ -1,0 +1,13 @@
+@import "_theme";
+@import "_responsive";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $sz_default;
+  font-family: $main_font;
+  user-select: none;
+}
