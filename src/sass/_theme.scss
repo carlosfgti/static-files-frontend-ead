@@ -65,7 +65,7 @@ html {
   font-weight: 300;
   padding: 7px;
   border-radius: 20px;
-  transition: all 0.5s;
+  transition: background-color 0.5s;
   box-shadow: $defaultShadow;
 
   &.primary {
@@ -129,7 +129,7 @@ i.buttom {
   align-items: center;
   padding: 6px;
   margin-bottom: .5rem;
-  transition: all .5s;
+  transition: color .5s, border .5s;
 
   input {
     border: none;
@@ -159,7 +159,7 @@ i.buttom {
 .link {
   text-decoration: none;
   font-weight: 600;
-  transition: all .5s;
+  transition: color .5s;
 
   &.primary {
     color: $primary;

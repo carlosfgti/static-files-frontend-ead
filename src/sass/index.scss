@@ -21,7 +21,7 @@ section#loginPage {
       border-radius: 10px;
       display: flex;
       box-shadow: $defaultShadow;
-      transition: all .2s;
+      transition: width .2s;
       margin: 2rem 0;
 
       .decor {
