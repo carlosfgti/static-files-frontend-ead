@@ -22,6 +22,7 @@ section#loginPage {
       display: flex;
       box-shadow: $defaultShadow;
       transition: all .2s;
+      margin: 2rem 0;
 
       .decor {
         width: 50%;
@@ -66,7 +67,6 @@ section#loginPage {
         .copyright {
           position: absolute;
           color: $textColorLight;
-          font-size: 10px;
           bottom: 10px;
           font-weight: 300;
         }
