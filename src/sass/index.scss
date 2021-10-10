@@ -21,6 +21,7 @@ section#loginPage {
       border-radius: 10px;
       display: flex;
       box-shadow: $defaultShadow;
+      transition: all .2s;
 
       .decor {
         width: 50%;
@@ -112,6 +113,73 @@ section#loginPage {
               margin-bottom: 1.5rem;
             }
           }
+        }
+      }
+
+      @include respond-to('big') {
+        width: 80%;
+      }
+
+      @include respond-to('medium') {
+        flex-direction: column;
+
+        .decor {
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+
+          &::before {
+            border-radius: 10px 10px 0 0;
+          }
+
+          .content {
+
+            .logo {
+              margin: 2rem 0;
+            }
+
+            .dots {
+              display: none;
+            }
+
+            .description {
+              display: none;
+            }
+          }
+        }
+
+        .login {
+          width: 100%;
+
+          .content {
+            margin: 1rem 0;
+
+            .logo img {
+              margin-top: 2rem;
+            }
+
+            .dots {
+              margin: 1rem 0;
+            }
+  
+            .description {
+              font-weight: 300;
+            }
+  
+            form {
+              margin-top: 2rem;
+  
+              button {
+                margin-top: .5rem;
+                margin-bottom: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      @include respond-to('small') {
+        .login .content form {
+          width: 100%;
         }
       }
     }
