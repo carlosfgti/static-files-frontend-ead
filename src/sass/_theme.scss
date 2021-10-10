@@ -1,64 +1,106 @@
 // Variables for theme
 
 // Font
-$main_font: 'Open Sans', sans-serif;
+$defaultFont: "Open Sans", sans-serif;
+
+// Font Sizes
+$defaultFontSize: 1rem;
 
 // Colors
-$primary: #8331A5;
-$primaryLight: #B77DCF;
+$primary: #8331a5;
+$primaryLight: #b77dcf;
+$grayLight: #dbdbdb;
 
 $backgroundDark: #272727;
 $backgroundLight: #464646;
+$backgroundThin: #e1e1e1;
 
-$LaravelColor: #FF8A3B;
-$LaravelColorLight: #FBA165;
-$LaravelColorButton: #FE6207;
-$LaravelColorButtonLight: #F96D1B;
+$textColor: #646464;
+$textColorLight: #e6e6e6;
 
-$jsColor: #20A883;
-$jsColorLight: #4EC2A3;
-$jsColorButton: #198E6E;
-$jsColorButtonLight: #3B977E;
+$LaravelColor: #ff8a3b;
+$LaravelColorLight: #fba165;
+$LaravelColorButton: #fe6207;
+$LaravelColorButtonLight: #f96d1b;
 
-$vueColor: #2E86B4;
-$vueColorLight: #56A1C8;
-$vueColorButton: #2C779E;
+$jsColor: #20a883;
+$jsColorLight: #4ec2a3;
+$jsColorButton: #198e6e;
+$jsColorButtonLight: #3b977e;
+
+$vueColor: #2e86b4;
+$vueColorLight: #56a1c8;
+$vueColorButton: #2c779e;
 $vueColorButtonLight: #327598;
 
-// Font Sizes
-$sz_default: 1rem;
+// Shadows
+$defaultShadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.2);
 
-// util classes
+// Global style
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $defaultFont;
+  font-size: $defaultFontSize;
+  user-select: none;
+}
+
+// Util classes
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
 .btnPrimary {
-    background-color: $primary;
-    color: white;
-    transition: all .5s;
+  background-color: $primary;
+  color: white;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $primaryLight;
+  }
+
+  &.laravel {
+    background-color: $LaravelColorButton;
 
     &:hover {
-        background-color: $primaryLight;
+      background-color: $LaravelColorButtonLight;
     }
+  }
 
-    &.laravel {
-        background-color: $LaravelColorButton;
+  &.js {
+    background-color: $jsColorButton;
 
-        &:hover {
-            background-color: $LaravelColorButtonLight;
-        }
+    &:hover {
+      background-color: $jsColorButtonLight;
     }
+  }
 
-    &.js {
-        background-color: $jsColorButton;
+  &.vue {
+    background-color: $vueColorButton;
 
-        &:hover {
-            background-color: $jsColorButtonLight;
-        }
+    &:hover {
+      background-color: $vueColorButtonLight;
     }
+  }
+}
 
-    &.vue {
-        background-color: $vueColorButton;
+.dots {
+  display: flex;
 
-        &:hover {
-            background-color: $vueColorButtonLight;
-        }
+  span {
+    height: 6px;
+    width: 6px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
     }
+  }
 }
