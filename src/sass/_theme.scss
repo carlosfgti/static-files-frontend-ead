@@ -18,6 +18,8 @@ $backgroundThin: #e1e1e1;
 $textColor: #646464;
 $textColorLight: #e6e6e6;
 
+$iconColor: #d8d8d8;
+
 $LaravelColor: #ff8a3b;
 $LaravelColorLight: #fba165;
 $LaravelColorButton: #fe6207;
@@ -54,13 +56,24 @@ html {
     height: auto;
 }
 
-.btnPrimary {
-  background-color: $primary;
+.btn {
   color: white;
+  border: none;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 7px;
+  border-radius: 20px;
   transition: all 0.5s;
+  box-shadow: $defaultShadow;
 
-  &:hover {
-    background-color: $primaryLight;
+  &.primary {
+    background-color: $primary;
+
+    &:hover {
+      background-color: $primaryLight;
+    }
   }
 
   &.laravel {
@@ -88,19 +101,71 @@ html {
   }
 }
 
+i.buttom {
+  cursor: pointer;
+}
+
 .dots {
   display: flex;
 
   span {
-    height: 6px;
-    width: 6px;
+    height: 5px;
+    width: 5px;
     background-color: white;
     border-radius: 50%;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 8px;
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+}
+
+.groupForm {
+  display: flex;
+  border: 1px solid $iconColor;
+  border-radius: 20px;
+  align-items: center;
+  padding: 6px;
+  margin-bottom: .5rem;
+  transition: all .5s;
+
+  input {
+    border: none;
+    outline: none;
+    color: $textColor;
+    width: 100%;
+
+    &::placeholder {
+      color: $iconColor;
+    }
+  }
+
+  i {
+    color: $iconColor;
+    margin: 0 5px;
+  }
+
+  &:focus-within {
+    border: 1px solid $primaryLight;
+  }
+
+  &:focus-within i {
+    color: $primaryLight;
+  }
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .5s;
+
+  &.primary {
+    color: $primary;
+
+    &:hover {
+      color: $primaryLight;
     }
   }
 }
