@@ -114,6 +114,15 @@ section#loginPage {
             }
           }
         }
+
+        .copyright {
+          color: $textColor;
+          bottom: -25px;
+          font-weight: 300;
+          text-align: center;
+          margin-bottom: 1rem;
+          display: none;
+        }
       }
 
       @include respond-to('big') {
@@ -145,6 +154,10 @@ section#loginPage {
               display: none;
             }
           }
+
+          .copyright {
+            display: none;
+          }
         }
 
         .login {
@@ -173,6 +186,10 @@ section#loginPage {
                 margin-bottom: 1.5rem;
               }
             }
+          }
+
+          .copyright {
+            display: block;
           }
         }
       }
