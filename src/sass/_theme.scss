@@ -1,3 +1,5 @@
+@import "_responsive";
+
 // Variables for theme
 
 // Font
@@ -38,6 +40,9 @@ $vueColorButtonLight: #327598;
 // Shadows
 $defaultShadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.2);
 
+// Sizes
+$navSize: 70px;
+
 // Global style
 * {
   margin: 0;
@@ -48,6 +53,22 @@ html {
   font-family: $defaultFont;
   font-size: $defaultFontSize;
   user-select: none;
+}
+
+body {
+  min-height: 100vh;
+
+  &.dark {
+    background-color: $backgroundDark;
+  }
+
+  &.light {
+    background-color: $backgroundLight;
+  }
+}
+
+ul {
+  list-style: none;
 }
 
 // Util classes

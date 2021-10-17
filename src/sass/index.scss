@@ -1,5 +1,4 @@
 @import "_theme";
-@import "_responsive";
 
 section#loginPage {
   min-height: 100vh;
@@ -200,5 +199,89 @@ section#loginPage {
         }
       }
     }
+  }
+}
+
+header#header {
+  nav {
+    height: 70px;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+
+    .logo img {
+      width: 170px;
+    }
+
+    .toggleMenu {
+      position: absolute;
+      left: 0;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 1.8rem;
+      margin-left: .5rem;
+    }
+  }
+}
+
+body.page {
+  section {
+    min-height: calc(100vh - (#{$navSize} * 1.5));
+    padding-top: 70px;
+
+    .pageTitle {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0; 
+
+      .title {
+        color: white;
+        margin-bottom: .5rem;
+      }
+    }
+
+    .content {
+      margin-top: 3rem;
+
+      ul {
+        margin: 0 auto;
+        width: 900px;
+
+        li {
+          .card {
+            height: 80px;
+            background-color: $primary;
+            display: flex;
+            border-radius: 20px;
+            box-shadow: $defaultShadow;
+
+            .icom {
+
+            }
+
+            .title {
+
+            }
+
+            .action {
+              
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
   }
 }
