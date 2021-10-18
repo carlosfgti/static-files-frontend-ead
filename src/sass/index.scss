@@ -244,16 +244,18 @@ body.page {
       .title {
         color: white;
         margin-bottom: .5rem;
+        font-size: 15px;
       }
     }
 
     .content {
-      margin-top: 3rem;
+      margin: 3rem 3rem;
 
       ul {
         margin: 0 auto;
         width: 900px;
-        transition: .5s all;
+        transition: width .5s;
+        margin-bottom: 1rem;
 
         li {
           display: flex;
@@ -267,7 +269,7 @@ body.page {
             display: flex;
             border-radius: 20px;
             box-shadow: $defaultShadow;
-            transition: background-color .5s;
+            transition: background-color .5s, width .5s;
             align-items: center;
             justify-content: space-between;
             width: 100%;
@@ -279,7 +281,7 @@ body.page {
               align-items: center;
 
               img {
-                width: 50px;
+                width: 45px;
                 height: auto;
               }
             }
@@ -299,6 +301,29 @@ body.page {
                 box-shadow: none;
               }
             }
+
+            @include respond-to('small') {
+              flex-direction: column;
+              height: auto;
+              padding: 1rem;
+
+              .icon {
+                margin-bottom: 1rem;
+              }
+
+              .title {
+                text-align: center;
+                margin-bottom: 1rem;
+              }
+
+              .action {
+                width: 100%;
+
+                button {
+                  box-shadow: $defaultShadow;
+                }
+              }
+            }
           }
 
           .dots {
@@ -308,6 +333,10 @@ body.page {
           &:last-child .dots {
             display: none;
           }
+        }
+
+        @include respond-to('big') {
+          width: 100%;
         }
       }
     }
