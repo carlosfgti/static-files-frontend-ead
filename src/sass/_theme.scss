@@ -88,6 +88,7 @@ ul {
   border-radius: 20px;
   transition: background-color 0.5s;
   box-shadow: $defaultShadow;
+  cursor: pointer;
 
   &.primary {
     background-color: $primary;
@@ -119,6 +120,30 @@ ul {
     &:hover {
       background-color: $vueColorButtonLight;
     }
+  }
+}
+
+.bg-laravel {
+  background-color: $LaravelColor;
+
+  &:hover {
+    background-color: $LaravelColorLight;
+  }
+}
+
+.bg-js {
+  background-color: $jsColor;
+
+  &:hover {
+    background-color: $jsColorLight;
+  }
+}
+
+.bg-vue {
+  background-color: $vueColor;
+
+  &:hover {
+    background-color: $vueColorLight;
   }
 }
 

@@ -253,26 +253,60 @@ body.page {
       ul {
         margin: 0 auto;
         width: 900px;
+        transition: .5s all;
 
         li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
           .card {
-            height: 80px;
-            background-color: $primary;
+            height: 70px;
             display: flex;
             border-radius: 20px;
             box-shadow: $defaultShadow;
+            transition: background-color .5s;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
 
-            .icom {
+            .icon {
+              margin: 0 1rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
 
+              img {
+                width: 50px;
+                height: auto;
+              }
             }
 
             .title {
-
+              width: 100%;
+              color: white;
+              margin: 0 1rem;
+              font-size: 15px;
             }
 
             .action {
-              
+              margin: 0 1rem;
+
+              button {
+                padding: 7px 20px;
+                box-shadow: none;
+              }
             }
+          }
+
+          .dots {
+            margin: .5rem 0;
+          }
+
+          &:last-child .dots {
+            display: none;
           }
         }
       }
