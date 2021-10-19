@@ -246,6 +246,18 @@ body.page {
         margin-bottom: .5rem;
         font-size: 15px;
       }
+
+      .subtitle {
+        color: white;
+        margin-bottom: .5rem;
+      }
+
+      .btn {
+        width: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-bottom: 1rem;
+      }
     }
 
     .content {
@@ -289,14 +301,13 @@ body.page {
             .title {
               width: 100%;
               color: white;
-              margin: 0 1rem;
               font-size: 15px;
             }
 
             .action {
               margin: 0 1rem;
 
-              button {
+              .btn {
                 padding: 7px 20px;
                 box-shadow: none;
               }

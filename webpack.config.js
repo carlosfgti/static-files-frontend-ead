@@ -33,6 +33,14 @@ module.exports = {
             filename: 'login.html',
             template: './src/login.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'trainings.html',
+            template: './src/trainings.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'training.html',
+            template: './src/training.html'
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css'

@@ -37,6 +37,11 @@ $vueColorLight: #56a1c8;
 $vueColorButton: #2c779e;
 $vueColorButtonLight: #327598;
 
+$flutterColor: #606060;
+$flutterColorLight: #7c7c7c;
+$flutterColorButton: #545454;
+$flutterColorButtonLight: #5e5e5e;
+
 // Shadows
 $defaultShadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.2);
 
@@ -88,6 +93,8 @@ ul {
   border-radius: 20px;
   transition: background-color 0.5s;
   box-shadow: $defaultShadow;
+  text-decoration: none;
+  outline: none;
   cursor: pointer;
 
   &.primary {
@@ -121,6 +128,14 @@ ul {
       background-color: $vueColorButtonLight;
     }
   }
+
+  &.flutter {
+    background-color: $flutterColorButton;
+
+    &:hover {
+      background-color: $flutterColorButtonLight;
+    }
+  }
 }
 
 .bg-laravel {
@@ -144,6 +159,14 @@ ul {
 
   &:hover {
     background-color: $vueColorLight;
+  }
+}
+
+.bg-flutter {
+  background-color: $flutterColor;
+
+  &:hover {
+    background-color: $flutterColorLight;
   }
 }
 
