@@ -212,6 +212,7 @@ header#header {
     position: fixed;
     width: 100%;
     z-index: 999;
+    box-shadow: $defaultShadow;
 
     .logo img {
       width: 170px;
@@ -263,7 +264,7 @@ body.page {
     }
 
     .content {
-      margin: 3rem 3rem;
+      margin: 1.5rem 3rem;
 
       ul.listCourses {
         margin: 0 auto;
