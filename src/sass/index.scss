@@ -398,6 +398,7 @@ section .container {
 
       .modules {
         position: relative;
+        cursor: pointer;
 
         .name {
           display: flex;
@@ -409,6 +410,7 @@ section .container {
           background-color: $backgroundLight;
           box-shadow: $defaultShadow;
           position: relative;
+          transition: background-color .5s;
 
           .text {
             font-size: 14px;
@@ -418,6 +420,10 @@ section .container {
           .icon {
             height: 6px;
             line-height: 0;
+          }
+
+          &:hover {
+            background-color: $flutterColor;
           }
         }
 
@@ -432,6 +438,7 @@ section .container {
             background-color: $backgroundList;
             height: 40px;
             margin-bottom: 3px;
+            transition: background-color .5s;
 
             .check {
               color: $flutterColor;
@@ -441,7 +448,7 @@ section .container {
               }
             }
 
-            .nameClass {
+            .nameLesson {
               width: 100%;
               padding: 0 1rem;
               font-size: 14px;
@@ -452,8 +459,20 @@ section .container {
               color: $LaravelColor;
             }
 
+            &:hover {
+              background-color: $flutterColor;
+            }
+
             &:last-child {
               margin-bottom: 0;
+            }
+
+            &.active {
+              background-color: $flutterColor;
+
+              .nameLesson {
+                color: $LaravelColor;
+              }
             }
           }
         }
@@ -463,13 +482,51 @@ section .container {
 
   .right {
     width: 80%;
-    min-height: 900px;
 
     .content {
       margin: 0 .5rem;
       background-color: $backgroundLight;
-      height: 100%;
       border-radius: 10px;
+
+      .training {
+        height: calc(100vh - 180px);
+
+        .card {
+          border-radius: 10px 10px 0 0;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .icon {
+            margin: 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 45px;
+              height: auto;
+            }
+          }
+
+          .title {
+            color: white;
+            font-size: 15px;
+            width: 100%;
+          }
+
+          .btn {
+            width: 100px;
+            margin: 0 1rem;
+          }
+        }
+
+        iframe {
+          height: calc(100vh - 240px);
+          border-radius: 0 0 10px 10px;
+        }
+      }
     }
   }
 }

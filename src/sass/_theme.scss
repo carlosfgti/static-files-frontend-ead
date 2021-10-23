@@ -98,6 +98,10 @@ ul {
   outline: none;
   cursor: pointer;
 
+  & i {
+    margin-right: 5px;
+  }
+
   &.primary {
     background-color: $primary;
 
