@@ -226,6 +226,21 @@ header#header {
       font-size: 1.8rem;
       margin-left: 0.5rem;
     }
+
+    .toggleList {
+      position: absolute;
+      right: 0;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 1.8rem;
+      margin-right: 0.5rem;
+      display: none;
+
+      @include respond-to("big") {
+        display: block;
+      }
+    }
   }
 }
 
@@ -284,7 +299,7 @@ body.page {
             transition: background-color 0.5s, width 0.5s;
             align-items: center;
             justify-content: space-between;
-            width: 100%;
+            width: calc(100% - 2rem);
 
             .icon {
               margin: 0 1rem;
@@ -328,10 +343,12 @@ body.page {
               }
 
               .action {
+                display: flex;
                 width: 100%;
 
-                button {
-                  box-shadow: $defaultShadow;
+                .btn {
+                  box-shadow: none;
+                  width: 100%;
                 }
               }
             }
