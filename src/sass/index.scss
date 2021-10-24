@@ -256,15 +256,13 @@ body.page {
 
       .btn {
         width: auto;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
         margin-bottom: 1rem;
         box-shadow: none;
       }
     }
 
     .content {
-      margin: 1.5rem 3rem;
+      margin: 1rem 3rem;
 
       ul.listCourses {
         margin: 0 auto;
@@ -311,8 +309,8 @@ body.page {
               margin: 0 1rem;
 
               .btn {
-                padding: 7px 20px;
                 box-shadow: none;
+                width: auto;
               }
             }
 
@@ -488,7 +486,7 @@ section .container {
       border-radius: 10px;
 
       .training {
-        height: calc(100vh - 200px);
+        height: calc(100vh - #{$trainingSpace});
 
         .card {
           border-radius: 10px 10px 0 0;
@@ -522,7 +520,7 @@ section .container {
         }
 
         iframe {
-          height: calc(100vh - 260px);
+          height: calc(100vh - (#{$trainingSpace} + 60px));
           border-radius: 0 0 10px 10px;
         }
       }
@@ -549,58 +547,108 @@ section .container {
         .content {
           margin: 0;
 
-          .commentContent {
+          .card {
             background-color: $backgroundLight;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 10px;
-
-            .avatar {
-              margin-right: 1rem;
-
-              img {
-                width: 60px;
-                height: auto;
-              }
-            }
-
-            .comment {
-              background-color: $textColor;
-              color: white;
+            
+            .commentContent {
               display: flex;
-              flex-direction: column;
-              justify-content: center;
+              justify-content: space-between;
+              align-items: center;
               padding: 1rem;
-              border-radius: 20px;
-              width: 80%;
-              position: relative;
-
-              .owner {
-                color: $textColorOwner;
-                font-size: 12px;
+  
+              .avatar {
+                margin-right: 1rem;
+  
+                img {
+                  width: 60px;
+                  height: auto;
+                }
+              }
+  
+              .comment {
+                width: 100%;
+                margin-left: .5rem;
+  
+                .balloon {
+                  background-color: $textColor;
+                  color: white;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  padding: 1rem;
+                  border-radius: 20px;
+                  position: relative;
+                  max-width: 80%;
+  
+                  .owner {
+                    color: $textColorOwner;
+                    font-size: 12px;
+                  }
+    
+                  .text {
+                    font-size: 15px;
+                  }
+    
+                  span.fas {
+                    position: absolute;
+                    transform: rotate(90deg);
+                    font-size: 3rem;
+                    left: -8px;
+                    color: $textColor;
+                  }
+                }
+              }
+  
+              .btn {
+                width: auto;
+                margin-left: 1rem;
+                box-shadow: none;
               }
 
-              .text {
-                font-size: 15px;
-              }
+              &.rightContent {
+                justify-content: end;
 
-              span.fas {
-                position: absolute;
-                transform: rotate(90deg);
-                font-size: 3rem;
-                left: -8px;
-                color: $textColor;
+                .avatar {
+                  margin-right: 0;
+                  margin-left: 1rem;
+                }
+
+                .comment {
+                  margin-left: 0;
+                  width: 80%;
+
+                  .balloon {
+                    background-color: $jsColor;
+                    max-width: 100%;
+                    margin-right: .5rem;
+      
+                    span.fas {
+                      transform: rotate(-90deg);
+                      right: -8px;
+                      left: inherit;
+                      color: $jsColor;
+                    }
+                  }
+                }
               }
             }
 
-            .btn {
-              width: auto;
-              margin-left: 1rem;
-              width: 130px;
-              box-shadow: none;
+            .answersContent {
+              border-top: 2px solid $backgroundDark;
+              padding: 1rem 0;
+
+              .answer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn {
+                  width: auto;
+                  box-shadow: none;
+                }
+              } 
             }
 
             &:last-child {

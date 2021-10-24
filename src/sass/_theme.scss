@@ -49,6 +49,7 @@ $defaultShadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.2);
 
 // Sizes
 $navSize: 70px;
+$trainingSpace: 190px;
 
 // Global style
 * {
@@ -91,13 +92,14 @@ ul {
   text-align: center;
   font-size: 14px;
   font-weight: 300;
-  padding: 7px;
+  padding: 7px 1rem;
   border-radius: 20px;
   transition: background-color 0.5s;
   box-shadow: $defaultShadow;
   text-decoration: none;
   outline: none;
   cursor: pointer;
+  white-space: nowrap;
 
   & i {
     margin-right: 5px;
