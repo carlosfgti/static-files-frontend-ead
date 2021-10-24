@@ -20,7 +20,7 @@ section#loginPage {
       border-radius: 10px;
       display: flex;
       box-shadow: $defaultShadow;
-      transition: width .2s;
+      transition: width 0.2s;
       margin: 2rem 0;
 
       .decor {
@@ -108,7 +108,7 @@ section#loginPage {
             margin-top: 5rem;
 
             button {
-              margin-top: .5rem;
+              margin-top: 0.5rem;
               margin-bottom: 1.5rem;
             }
           }
@@ -124,11 +124,11 @@ section#loginPage {
         }
       }
 
-      @include respond-to('big') {
+      @include respond-to("big") {
         width: 80%;
       }
 
-      @include respond-to('medium') {
+      @include respond-to("medium") {
         flex-direction: column;
 
         .decor {
@@ -140,7 +140,6 @@ section#loginPage {
           }
 
           .content {
-
             .logo {
               margin: 2rem 0;
             }
@@ -172,16 +171,16 @@ section#loginPage {
             .dots {
               margin: 1rem 0;
             }
-  
+
             .description {
               font-weight: 300;
             }
-  
+
             form {
               margin-top: 2rem;
-  
+
               button {
-                margin-top: .5rem;
+                margin-top: 0.5rem;
                 margin-bottom: 1.5rem;
               }
             }
@@ -193,7 +192,7 @@ section#loginPage {
         }
       }
 
-      @include respond-to('small') {
+      @include respond-to("small") {
         .login .content form {
           width: 100%;
         }
@@ -225,7 +224,7 @@ header#header {
       cursor: pointer;
       padding: 10px;
       font-size: 1.8rem;
-      margin-left: .5rem;
+      margin-left: 0.5rem;
     }
   }
 }
@@ -241,17 +240,17 @@ body.page {
       text-align: center;
       justify-content: center;
       align-items: center;
-      margin: 1rem 0; 
+      margin: 1rem 0;
 
       .title {
         color: white;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         font-size: 15px;
       }
 
       .subtitle {
         color: white;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
 
       .btn {
@@ -267,7 +266,7 @@ body.page {
       ul.listCourses {
         margin: 0 auto;
         width: 900px;
-        transition: width .5s;
+        transition: width 0.5s;
         margin-bottom: 1rem;
 
         li {
@@ -282,7 +281,7 @@ body.page {
             display: flex;
             border-radius: 20px;
             box-shadow: $defaultShadow;
-            transition: background-color .5s, width .5s;
+            transition: background-color 0.5s, width 0.5s;
             align-items: center;
             justify-content: space-between;
             width: 100%;
@@ -314,7 +313,7 @@ body.page {
               }
             }
 
-            @include respond-to('small') {
+            @include respond-to("small") {
               flex-direction: column;
               height: auto;
               padding: 1rem;
@@ -339,7 +338,7 @@ body.page {
           }
 
           .dots {
-            margin: .5rem 0;
+            margin: 0.5rem 0;
           }
 
           &:last-child .dots {
@@ -347,9 +346,13 @@ body.page {
           }
         }
 
-        @include respond-to('big') {
+        @include respond-to("big") {
           width: 100%;
         }
+      }
+
+      @include respond-to("extra-big") {
+        margin: 1rem 1rem;
       }
     }
   }
@@ -371,7 +374,7 @@ section .container {
     min-height: 300px;
 
     .card {
-      margin: 0 .5rem;
+      margin: 0 0.5rem;
       border-radius: 10px;
       background-color: $backgroundLight;
       padding-bottom: 1rem;
@@ -386,7 +389,7 @@ section .container {
         padding: 0 1rem;
 
         .text {
-          font-size: 15px
+          font-size: 15px;
         }
 
         .icon {
@@ -408,7 +411,7 @@ section .container {
           background-color: $backgroundLight;
           box-shadow: $defaultShadow;
           position: relative;
-          transition: background-color .5s;
+          transition: background-color 0.5s;
 
           .text {
             font-size: 14px;
@@ -426,7 +429,6 @@ section .container {
         }
 
         .classes {
-
           li {
             display: flex;
             justify-content: space-between;
@@ -436,7 +438,7 @@ section .container {
             background-color: $backgroundList;
             height: 40px;
             margin-bottom: 3px;
-            transition: background-color .5s;
+            transition: background-color 0.5s;
 
             .check {
               color: $flutterColor;
@@ -476,13 +478,21 @@ section .container {
         }
       }
     }
+
+    @include respond-to("extra-big") {
+      width: 30%;
+    }
+
+    @include respond-to("big") {
+      display: none;
+    }
   }
 
   .right {
     width: 80%;
 
     .content {
-      margin: 0 .5rem;
+      margin: 0 0.5rem;
       border-radius: 10px;
 
       .training {
@@ -522,6 +532,22 @@ section .container {
         iframe {
           height: calc(100vh - (#{$trainingSpace} + 60px));
           border-radius: 0 0 10px 10px;
+
+          @include respond-to("extra-big") {
+            height: 470px;
+          }
+
+          @include respond-to("big") {
+            height: 340px;
+          }
+        }
+
+        @include respond-to("extra-big") {
+          height: 530px;
+        }
+
+        @include respond-to("big") {
+          height: 400px;
         }
       }
 
@@ -551,26 +577,26 @@ section .container {
             background-color: $backgroundLight;
             margin-bottom: 1rem;
             border-radius: 10px;
-            
+
             .commentContent {
               display: flex;
               justify-content: space-between;
               align-items: center;
               padding: 1rem;
-  
+
               .avatar {
                 margin-right: 1rem;
-  
+
                 img {
                   width: 60px;
                   height: auto;
                 }
               }
-  
+
               .comment {
                 width: 100%;
-                margin-left: .5rem;
-  
+                margin-left: 0.5rem;
+
                 .balloon {
                   background-color: $textColor;
                   color: white;
@@ -581,16 +607,16 @@ section .container {
                   border-radius: 20px;
                   position: relative;
                   max-width: 80%;
-  
+
                   .owner {
                     color: $textColorOwner;
                     font-size: 12px;
                   }
-    
+
                   .text {
                     font-size: 15px;
                   }
-    
+
                   span.fas {
                     position: absolute;
                     transform: rotate(90deg);
@@ -598,9 +624,13 @@ section .container {
                     left: -8px;
                     color: $textColor;
                   }
+
+                  @include respond-to("big") {
+                    max-width: 100%;
+                  }
                 }
               }
-  
+
               .btn {
                 width: auto;
                 margin-left: 1rem;
@@ -622,13 +652,47 @@ section .container {
                   .balloon {
                     background-color: $jsColor;
                     max-width: 100%;
-                    margin-right: .5rem;
-      
+                    margin-right: 0.5rem;
+
                     span.fas {
                       transform: rotate(-90deg);
                       right: -8px;
                       left: inherit;
                       color: $jsColor;
+                    }
+                  }
+                }
+              }
+
+              &.main {
+                @include respond-to("small") {
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+
+                  .avatar {
+                    margin-right: 0;
+                    margin-bottom: 1rem;
+                  }
+
+                  .comment {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-bottom: 1rem;
+
+                    .balloon {
+                      justify-content: center;
+                      align-items: center;
+
+                      .text {
+                        text-align: center;
+                      }
+
+                      span.fas {
+                        transform: rotate(180deg);
+                        left: inherit;
+                        top: -18px;
+                      }
                     }
                   }
                 }
@@ -648,7 +712,7 @@ section .container {
                   width: auto;
                   box-shadow: none;
                 }
-              } 
+              }
             }
 
             &:last-child {
@@ -657,6 +721,14 @@ section .container {
           }
         }
       }
+    }
+
+    @include respond-to("extra-big") {
+      width: 70%;
+    }
+
+    @include respond-to("big") {
+      width: 100%;
     }
   }
 }
