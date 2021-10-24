@@ -485,11 +485,10 @@ section .container {
 
     .content {
       margin: 0 .5rem;
-      background-color: $backgroundLight;
       border-radius: 10px;
 
       .training {
-        height: calc(100vh - 180px);
+        height: calc(100vh - 200px);
 
         .card {
           border-radius: 10px 10px 0 0;
@@ -523,8 +522,91 @@ section .container {
         }
 
         iframe {
-          height: calc(100vh - 240px);
+          height: calc(100vh - 260px);
           border-radius: 0 0 10px 10px;
+        }
+      }
+
+      .comments {
+        margin: 1rem 0;
+        margin-bottom: 0;
+
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+
+          .title {
+            color: white;
+          }
+
+          .btn {
+            width: auto;
+          }
+        }
+
+        .content {
+          margin: 0;
+
+          .commentContent {
+            background-color: $backgroundLight;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+
+            .avatar {
+              margin-right: 1rem;
+
+              img {
+                width: 60px;
+                height: auto;
+              }
+            }
+
+            .comment {
+              background-color: $textColor;
+              color: white;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 1rem;
+              border-radius: 20px;
+              width: 80%;
+              position: relative;
+
+              .owner {
+                color: $textColorOwner;
+                font-size: 12px;
+              }
+
+              .text {
+                font-size: 15px;
+              }
+
+              span.fas {
+                position: absolute;
+                transform: rotate(90deg);
+                font-size: 3rem;
+                left: -8px;
+                color: $textColor;
+              }
+            }
+
+            .btn {
+              width: auto;
+              margin-left: 1rem;
+              width: 130px;
+              box-shadow: none;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
         }
       }
     }
